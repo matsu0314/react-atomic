@@ -2,8 +2,10 @@ import { PrimaryButton } from "../atoms/button/PrimaryButtton";
 import styled from "styled-components";
 
 import { Input } from "../atoms/input/Input";
+import { memo } from "react";
 
-export const SearchInput = () => {
+export const SearchInput = memo(() => {
+  console.log("searchInput");
   return (
     <SContainer>
       <Input placeholder="検索条件を入力" />
@@ -12,7 +14,7 @@ export const SearchInput = () => {
       </SButtonWrapper>
     </SContainer>
   );
-};
+});
 
 const SContainer = styled.div`
   display: flex;
